@@ -7,7 +7,7 @@ include_once 'header.php';
 <section class="main-container">
 <div class = main-wrapper>
 <?php
-    if(isset($_SESSION['user_id'])){
+    if(isset($_SESSION['userId'])){
         echo
         '<html>
         </head>
