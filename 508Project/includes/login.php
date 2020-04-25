@@ -33,7 +33,7 @@ if(isset($_POST['submit'])){
                     while ($row = $result->fetch_assoc()) {
                         echo $row['classtype']."<br>";
                     }
-                    //header("Location: ../incorrectPass.php");
+                    header("Location: ../incorrectPass.php");
                     exit();
                 }
                 elseif($hashedpasschecker){
