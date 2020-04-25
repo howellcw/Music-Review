@@ -1,6 +1,6 @@
 <?php 
 require_once 'connection.php';
-//test
+
 $stmt = $conn->prepare("SELECT name from artists ORDER BY name");
 $stmt->execute();
 
