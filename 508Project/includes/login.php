@@ -12,7 +12,8 @@ if(isset($_POST['submit'])){
     //Check if inputs are empty
 
     if(empty($email) || empty($pass)){
-        header("Location: ../index.php?login=empty");
+        echo"empty login";
+        //header("Location: ../index.php?login=empty");
         exit();
     }else {
         $sql = "SELECT * FROM users WHERE email= '$email'";
