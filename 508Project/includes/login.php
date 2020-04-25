@@ -29,7 +29,7 @@ if(isset($_POST['submit'])){
                 //dehash the password to compare
                 $hashedpasschecker = password_verify($pass, $row['password']);
                 if(!$hashedpasschecker){
-                    echo "$eml , $pass  2";
+                    echo "$eml , $pass  2  ";
                     echo "$result";
                     //header("Location: ../incorrectPass.php");
                     exit();
