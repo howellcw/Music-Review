@@ -1,4 +1,4 @@
-<html>
+<?php 
 require_once 'connection.php';
 
 $stmt = $conn->prepare("SELECT name from artists ORDER BY name");
@@ -9,12 +9,12 @@ echo "<thead><tr><th>Artist</th></tr></thead>";
 echo "<tbody>";
 
 while ($row = $stmt->fetch()) {
-    <!--  echo "<tr><td>$row[name]</td></tr>"; -->
-    <li><a href = "artistInfo.php"<tr><td>$row[name]</td></tr>></a></li>
+    //echo "<tr><td>$row[name]</td></tr>";
+    echo "<tr><td>$row[name]</td></tr>";
 }
 
 echo "</tbody>";
 echo "</table>";
 
 
-</html>
+?>
