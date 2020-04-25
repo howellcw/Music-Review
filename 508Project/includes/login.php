@@ -38,7 +38,7 @@ if(isset($_POST['submit'])){
                 }
                 elseif($hashedpasschecker){
                     //login user
-                    $_SESSION['user_id'] = $row['userId'];
+                    $_SESSION['user_id'] = $row['userID'];
                     $_SESSION['user_name'] = $row['name'];
                     $_SESSION['user_gender'] = $row['gender'];
                     $_SESSION['user_age'] = $row['age'];
