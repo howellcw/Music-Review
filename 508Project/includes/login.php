@@ -5,8 +5,8 @@ session_start();
 if(isset($_POST['submit'])){
 
     include_once 'connection.php';
-    $email = mysql_real_escape_string($conn, $_POST['email']);
-    $pass = mysql_real_escape_string($conn, $_POST['password']);
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $pass = mysqli_real_escape_string($conn, $_POST['password']);
 
 
     //Check if inputs are empty
@@ -17,7 +17,7 @@ if(isset($_POST['submit'])){
     }else {
         $sql = "SELECT * FROM users WHERE email= '$email'";
         $result = mysql_query($conn, $sql);
-        $resultChecker = mysql_num_rows($result);
+        $resultChecker = mysqli_num_rows($result);
         if($resultChecker < 1){
             header("Location: ../incorrectPass.php");
             exit();
