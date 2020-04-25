@@ -10,7 +10,7 @@ echo "<tbody>";
 
 while ($row = $stmt->fetch()) {
     //echo "<tr><td>$row[name]</td></tr>";
-    echo "<tr><td>$row[name]</td></tr>";
+    echo "<li><a href = 'artistInfo.php'></a></li><tr><td>$row[name]</td></tr>";
 }
 
 echo "</tbody>";
