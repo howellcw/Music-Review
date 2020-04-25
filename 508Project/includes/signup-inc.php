@@ -22,7 +22,8 @@ if(isset($_POST['submit'])){
     } else {
         //Check for valid input characters
         if(!preg_match("/^[a-zA-Z]*$/",$name)){
-            header("Location: ../invalidString.php");
+            echo "$name";
+            //header("Location: ../invalidString.php");
             exit();
         } else {
             $sql = "SELECT * FROM users WHERE email = '$email'";
