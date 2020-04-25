@@ -7,7 +7,7 @@ include_once 'header.php';
 <section class="main-container">
 <div class = main-wrapper>
 <?php
-    if(isset($_SESSION['userId'])){
+    if(isset($_SESSION['user_id'])){
         echo
         '<html>
         </head>
@@ -21,7 +21,7 @@ include_once 'header.php';
         </html>';
     }
     else{
-        echo'<h2>Please log-in</h2>';
+        //echo'<h2>Please log-in</h2>';
     }
     ?>
     
