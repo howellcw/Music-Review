@@ -21,7 +21,7 @@ if(isset($_POST['submit'])){
 
     } else {
         //Check for valid input characters
-        if(!preg_match("/^[a-zA-Z]*$/",$name)){
+        if(empty($name)){
             echo "$name";
             //header("Location: ../invalidString.php");
             exit();
