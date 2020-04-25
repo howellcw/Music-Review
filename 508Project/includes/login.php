@@ -5,9 +5,6 @@ session_start();
 if(isset($_POST['submit'])){
 
     include_once 'connection.php';
-    $email = mysqli_real_escape_string($conn, $_POST['email']);
-    $pass = mysqli_real_escape_string($conn, $_POST['password']);
-
 
     //Check if inputs are empty
 
