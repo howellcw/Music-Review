@@ -15,6 +15,6 @@ $database = "project_20";
     echo "Connection failed: " . $e->getMessage();
 }*/
 
-$conn = mysqli_connect($Servername,$username,$dbpassword,$database);
+$conn = mysqli_connect($servername,$username,$dbpassword,$database);
 
 ?>
