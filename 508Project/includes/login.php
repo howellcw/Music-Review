@@ -19,7 +19,8 @@ if(isset($_POST['submit'])){
         $result = mysqli_query($conn, $sql);
         $resultChecker = mysqli_num_rows($result);
         if($resultChecker < 1){
-            header("Location: ../incorrectPass.php");
+            echo "$email , $password";
+            //header("Location: ../incorrectPass.php");
             exit();
         }
         else{
