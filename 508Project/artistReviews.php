@@ -9,8 +9,7 @@ echo "<thead><tr><th>Artist</th></tr></thead>";
 echo "<tbody>";
 
 while ($row = $stmt->fetch()) {
-    //echo "<tr><td>$row[name]</td></tr>";
-    echo "<li><tr><td><a href = 'artistInfo.php'></a></li>$row[name]</td></tr>";
+    echo "<tr><td>$row[name]</td></tr>";
 }
 
 echo "</tbody>";
