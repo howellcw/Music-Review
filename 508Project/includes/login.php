@@ -26,7 +26,7 @@ if(isset($_POST['submit'])){
         else{
             if($row = mysqli_fetch_assoc($result)){
                 //dehash the password to compare
-                $hashedpasschecker = password_verify($pass, $row['customer_password']);
+                $hashedpasschecker = password_verify($pass, $row['password']);
                 if(!$hashedpasschecker){
                     echo "$email , $password  2";
                     //header("Location: ../incorrectPass.php");
