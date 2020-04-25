@@ -23,7 +23,7 @@ if(isset($_POST['submit'])){
             exit();
         }
         else{
-            if($row = mysql_fetch_assoc($result)){
+            if($row = mysqli_fetch_assoc($result)){
                 //dehash the password to compare
                 $hashedpasschecker = password_verify($pass, $row['customer_password']);
                 if(!$hashedpasschecker){
