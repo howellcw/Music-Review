@@ -5,14 +5,14 @@ session_start();
 if(isset($_POST['submit'])){
 
     include_once 'connection.php';
-    $email = mysqli_real_escape_string($conn, $_POST['email']);
-    $password = mysqli_real_escape_string($conn, $_POST['password']);
+    $eml = mysqli_real_escape_string($conn, $_POST['email']);
+    $pass = mysqli_real_escape_string($conn, $_POST['password']);
 
 
     //Check if inputs are empty
 
-    if(empty($email) || empty($pass)){
-        echo"empty login";
+    if(empty($eml) || empty($pass)){
+        echo"empty login $eml & $pass";
         //header("Location: ../index.php?login=empty");
         exit();
     }else {
