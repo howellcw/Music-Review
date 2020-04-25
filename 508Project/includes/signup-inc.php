@@ -9,13 +9,14 @@ if(isset($_POST['submit'])){
     $age = mysqli_real_escape_string($conn, $_POST['age']);
     $password = mysqli_real_escape_string($conn, $_POST['password']);
     $gender = mysqli_real_escape_string($conn, $_POST['gender']);
+    
 
     //checking for errors
     //Check for empty fields
 
     if(empty($name) || empty($email) || empty($age) || empty($password) || empty($gender)){
 
-        header("Location: ../empty.php");
+        echo"$name, $email, $age, $password, $gender";
         exit();
 
     } else {
