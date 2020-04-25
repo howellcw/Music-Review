@@ -16,11 +16,11 @@ if(isset($_POST['submit'])){
         //header("Location: ../index.php?login=empty");
         exit();
     }else {
-        $sql = "SELECT * FROM users WHERE email= '$email'";
+        $sql = "SELECT * FROM users WHERE email= '$eml'";
         $result = mysqli_query($conn, $sql);
         $resultChecker = mysqli_num_rows($result);
         if($resultChecker < 1){
-            echo "$email , $password";
+            echo "$eml , $pass";
             //header("Location: ../incorrectPass.php");
             exit();
         }
