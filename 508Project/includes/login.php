@@ -30,7 +30,9 @@ if(isset($_POST['submit'])){
                 $hashedpasschecker = password_verify($pass, $row['password']);
                 if(!$hashedpasschecker){
                     echo "$eml , $pass  2  ";
-                    echo "$result";
+                    while ($row = $result->fetch_assoc()) {
+                        echo $row['classtype']."<br>";
+                    }
                     //header("Location: ../incorrectPass.php");
                     exit();
                 }
