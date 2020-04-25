@@ -28,7 +28,8 @@ if(isset($_POST['submit'])){
                 //dehash the password to compare
                 $hashedpasschecker = password_verify($pass, $row['customer_password']);
                 if(!$hashedpasschecker){
-                    header("Location: ../incorrectPass.php");
+                    echo "$email , $password  2";
+                    //header("Location: ../incorrectPass.php");
                     exit();
                 }
                 elseif($hashedpasschecker){
@@ -42,7 +43,8 @@ if(isset($_POST['submit'])){
                     exit();
                 }
                 else{
-                    header("Location: ../incorrectPass.php");
+                    echo "$email , $password   3";
+                    //header("Location: ../incorrectPass.php");
                     exit();
                 }
             }
