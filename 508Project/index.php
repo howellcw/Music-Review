@@ -21,7 +21,7 @@ include_once 'header.php';
         </html>';
     }
     else{
-        //echo'<h2>Please log-in</h2>';
+        echo'<h2>Please log-in</h2>';
     }
     ?>
     
