@@ -36,6 +36,7 @@ if(isset($_POST['submit'])){
                     $_SESSION['user_name'] = $row['name'];
                     $_SESSION['user_gender'] = $row['gender'];
                     $_SESSION['user_age'] = $row['age'];
+                    echo"success";
                     header("Location: ../index.php?login=successful");
                     exit();
                 }
