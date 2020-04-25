@@ -5,7 +5,7 @@ ini_set('display_errors', 1);
 
 $servername = "localhost";
 $username = "project_20";
-$password = "V00785650";
+$dbpassword = "V00785650";
 $database = "project_20";
 
 /*try{
@@ -15,6 +15,6 @@ $database = "project_20";
     echo "Connection failed: " . $e->getMessage();
 }*/
 
-$conn = mysqli_connect($Servername,$username,$password,$database);
+$conn = mysqli_connect($Servername,$username,$dbpassword,$database);
 
 ?>
