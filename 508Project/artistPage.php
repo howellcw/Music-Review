@@ -2,7 +2,7 @@
 require_once 'connection.php';
 
 $art = $_GET['q'];
-echo "$art";
+echo "'%".$art."%'";
 $stmt = $conn->query("SELECT title from songs WHERE name = '%".$art."%'");
 
 echo "<table style='border: solid 1px black;'>";
