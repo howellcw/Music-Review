@@ -2,6 +2,7 @@
 require_once 'connection.php';
 
 $art = $_GET['q'];
+echo "$art";
 $stmt = $conn->query("SELECT s.title, r.rating, r.review_txt FROM songs s JOIN artists a JOIN reviews r WHERE a.name = '%".$art."%'");
 
 echo "<table style='border: solid 1px black;'>";
