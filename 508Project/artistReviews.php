@@ -8,7 +8,7 @@ echo "<thead><tr><th>Artist</th></tr></thead>";
 echo "<tbody>";
 
 while ($row = $stmt->fetch_assoc()) {
-    echo "<tr><td>$row[name]</td></tr>";
+    echo "<tr><td>$row[name] + $row[artistID]</td></tr>";
 }
 
 echo "</tbody>";
