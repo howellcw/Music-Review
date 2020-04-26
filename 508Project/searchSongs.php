@@ -2,7 +2,7 @@
 
 include_once 'connection.php';
 
-$id = $_GET['y'];
+$id = $_GET['q'];
 $art = $_GET['q'];
 
 $sql = "select s.title from songs join artists a on a.name = '%".$art."%' where name like '%".$id."%' limit 1";
