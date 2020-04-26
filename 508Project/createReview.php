@@ -8,7 +8,7 @@
  $("#search").autocomplete("searchArtists.php");
  });
  jQuery(function(){ 
-	 $("#searchSong").autocomplete("searchArtists.php");
+	 $("#searchSong").autocomplete("searchSongs.php");
 	 });
  </script>
 </head>
