@@ -1,7 +1,7 @@
 <?php 
 require_once 'connection.php';
 
-$stmt = $conn->query("SELECT name from artists ORDER BY name");
+$stmt = $conn->query("SELECT name, artistID from artists ORDER BY name");
 
 echo "<table style='border: solid 1px black;'>";
 echo "<thead><tr><th>Artist</th></tr></thead>";
