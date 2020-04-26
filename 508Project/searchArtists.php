@@ -4,7 +4,7 @@ include_once 'connection.php';
 
 $id = $_GET['q'];
 
-$sql = "select name from artists where name like '%".$id."%' limit 1";
+$sql = "select name from artists where name like '%".$id."%' limit 10";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {

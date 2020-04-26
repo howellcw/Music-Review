@@ -1,18 +1,18 @@
-<?php 
-require_once 'connection.php';
-
-$stmt = $conn->query("SELECT name from artists ORDER BY name");
-
-echo "<table style='border: solid 1px black;'>";
-echo "<thead><tr><th>Artist</th></tr></thead>";
-echo "<tbody>";
-
-while ($row = $stmt->fetch_assoc()) {
-    echo "<tr><td>$row[name]</td></tr>";
-}
-
-echo "</tbody>";
-echo "</table>";
-
-
-?>
+<html>
+<head>
+ <link rel="stylesheet" type="text/css" href="style.css" />
+ <script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+ <script type="text/javascript" src="jquery.autocomplete.js"></script>
+ <script> 
+ jQuery(function(){ 
+ $("#search").autocomplete("searchArtists.php");
+ });
+ </script>
+</head>
+<body>
+ <form action="get_form.php">
+ Artist Name: <input type="text" name="a" id="search" placeholder="Enter Artist">
+ <input type="submit" value="Submit"/>
+ </form> 
+</body>
+</html>
