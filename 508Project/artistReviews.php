@@ -11,7 +11,7 @@
 </head>
 <body>
  <form action="artistPage.php">
- Artist Name: <input type="text" name="a" id="search" placeholder="Enter Artist">
+ Artist Name: <input type="text" name="q" id="search" placeholder="Enter Artist">
  <input type="submit" value="Submit"/>
  </form> 
 </body>
