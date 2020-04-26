@@ -7,7 +7,7 @@ echo "<table style='border: solid 1px black;'>";
 echo "<thead><tr><th>Artist</th></tr></thead>";
 echo "<tbody>";
 
-while ($row = $stmt->fetch()) {
+while ($row = $stmt->fetch_assoc()) {
     echo "<tr><td>$row[name]</td></tr>";
 }
 
