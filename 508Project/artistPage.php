@@ -10,10 +10,12 @@ echo "<thead><tr><th>Artist</th></tr></thead>";
 echo "<tbody>";
 
 while ($row = $stmt->fetch_assoc()) {
-    echo "<tr><td>$row[title]</td></tr>";
-    echo "<tr><td>$row[rating]</td></tr>";
-    echo "<tr><td>$row[review]</td></tr>";
+    echo $row['s.title'];
+    echo $row['r.rating'];
+    echo $row['r.review_txt'];
 }
+
+
 
 echo "</tbody>";
 echo "</table>";
