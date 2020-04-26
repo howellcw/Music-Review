@@ -10,7 +10,7 @@
  </script>
 </head>
 <body>
- <form action="get_form.php">
+ <form action="artistPage.php">
  Artist Name: <input type="text" name="a" id="search" placeholder="Enter Artist">
  <input type="submit" value="Submit"/>
  </form> 
