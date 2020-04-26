@@ -10,9 +10,9 @@ echo "<thead><tr><th>Reviews</th></tr></thead>";
 echo "<tbody>";
 
 while ($row = $stmt->fetch_assoc()) {
-    echo $row['s.title'];
-    echo $row['r.rating'];
-    echo $row['r.review_txt'];
+    echo $row['title'];
+    echo $row['rating'];
+    echo $row['review_txt'];
 }
 
 
