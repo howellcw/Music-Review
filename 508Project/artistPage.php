@@ -13,6 +13,7 @@ while ($row = $stmt->fetch_assoc()) {
     echo $row['s.title'];
     echo $row['r.rating'];
     echo $row['r.review_txt'];
+    echo "car";
 }
 
 
