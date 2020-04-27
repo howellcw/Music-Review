@@ -5,7 +5,7 @@ $selectedAlbum= $_GET['albumSelect'];
 $stmt = $conn->query("SELECT s.songID, title FROM songs s JOIN albums a on s.albumID = \"$selectedAlbum\"");
 
 echo "<form action = 'submission.php'>";
-echo "Song: <select id = 'albumsSelect'>";
+echo "Song: <select id = 'songSelect'>";
 
 while ($row = $stmt->fetch_assoc()) {
     echo "<option value = $row[songID]> $row[title] </option>";
