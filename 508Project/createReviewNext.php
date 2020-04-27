@@ -11,19 +11,10 @@ echo "Album: <select id = 'albumsSelect'>";
 while ($row = $stmt->fetch_assoc()) {
     echo "<option value = $row[albumID]> $row[albumTitle] </option>";
 }
-
-$albumSelected = $_GET['albumsSelect'];
+echo " <input type='submit' value='Submit'/>";
 echo "</select>";
 echo "</form>";
 
-$songstmt = $conn->query("SELECT s.title, s.songID from songs s JOIN albums al; ON (s.albumID = al.albumID) WHERE al.albumID = \"$albumSelected\"");
 
-echo "Song: <select id = 'songSelected'>";
-
-while ($songrow = $songstmt->fetch_assoc()) {
-    echo "<option value = $songrow[songID]> $songrow[title] </option>";
-}
-echo " <input type='submit' value='Submit'/>";
-echo "</select>";
 
 ?>
