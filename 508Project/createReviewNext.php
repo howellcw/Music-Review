@@ -3,7 +3,7 @@ require_once 'connection.php';
 
 $artReview = $_GET['r'];
 
-$stmt = $conn->query("SELECT al.albumTitle, al.albumID from albums al JOIN artists a ON (al.artistID = a.artistID) WHERE a.name = \"$artReview\"");
+$stmt = $conn->query("SELECT s.songID, al.albumID,  from albums al JOIN artists a ON (al.artistID = a.artistID) WHERE a.name = \"$artReview\"");
 
 echo "<form action = 'createReviewSong.php'>";
 echo "Album: <select name = 'albumSelect'>";
