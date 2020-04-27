@@ -10,8 +10,8 @@
  </script>
 </head>
 <body>
- <form action="get_form.php">
- Artist Name: <input type="text" name="q" id="search" placeholder="Enter Artist">
+ <form action="createReviewNext.php">
+ Artist Name: <input type="text" name="r" id="search" placeholder="Enter Artist">
  <input type="submit" value="Submit"/>
  </form> 
 </body>
