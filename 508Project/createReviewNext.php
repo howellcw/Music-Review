@@ -14,12 +14,12 @@ while ($row = $stmt->fetch_assoc()) {
 $albumSelected = $_GET['albumsSelect'];
 echo "</select>";
 
-$stmt = $conn->query("SELECT s.title, s.songID from songs s JOIN albums a; ON (s.albumID = al.albumID) WHERE al.name = \"$albumSelected\"");
+$songstmt = $conn->query("SELECT s.title, s.songID from songs s JOIN albums a; ON (s.albumID = al.albumID) WHERE al.name = \"$albumSelected\"");
 
 echo "Song: <select id = 'albumsSelect'>";
 
-while ($row = $stmt->fetch_assoc()) {
-    echo "<option value = $row[songID]> $row[title] </option>";
+while ($songrow = $songstmt->fetch_assoc()) {
+    echo "<option value = $songrow[songID]> $songrow[title] </option>";
 }
 
 echo "</select>";
