@@ -8,7 +8,7 @@ $stmt = $conn->query("SELECT al.albumTitle, al.albumID from albums al JOIN artis
 echo "<select id = 'albumsSelect'>";
 
 while ($row = $stmt->fetch_assoc()) {
-    echo "<option value = $row[albumID]> $row[albumTitle] </option>";
+    echo "Album: <option value = $row[albumID]> $row[albumTitle] </option>";
 }
 
 echo "</select>";
