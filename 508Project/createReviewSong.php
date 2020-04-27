@@ -5,7 +5,7 @@ $selectedAlbum= $_GET['albumSelect'];
 $stmt = $conn->query("SELECT DISTINCT s.songID, s.title FROM songs s JOIN albums a on s.albumID = $selectedAlbum");
 
 echo "<form action = 'createReviewRating.php'>";
-echo "Song: <select id = 'songSelect'>";
+echo "Song: <select name = 'songSelect'>";
 
 while ($row = $stmt->fetch_assoc()) {
     echo "<option value = $row[songID]> $row[title] </option>";
