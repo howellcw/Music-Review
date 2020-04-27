@@ -16,7 +16,7 @@ echo "</select>";
 
 $songstmt = $conn->query("SELECT s.title, s.songID from songs s JOIN albums al; ON (s.albumID = al.albumID) WHERE al.albumID = \"$albumSelected\"");
 
-echo "Song: <select id = 'albumsSelect'>";
+echo "Song: <select id = 'songSelected'>";
 
 while ($songrow = $songstmt->fetch_assoc()) {
     echo "<option value = $songrow[songID]> $songrow[title] </option>";
