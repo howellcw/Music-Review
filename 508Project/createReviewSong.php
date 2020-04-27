@@ -2,7 +2,7 @@
 require_once 'connection.php';
 
 $selectedAlbum= $_GET['albumSelect'];
-$stmt = $conn->query("SELECT s.songID, title FROM songs s JOIN albums a on s.albumID = \"$selectedAlbum\"");
+$stmt = $conn->query("SELECT s.songID, s.title FROM songs s JOIN albums a on s.albumID = \"$selectedAlbum\"");
 
 echo "<form action = 'submission.php'>";
 echo "Song: <select id = 'songSelect'>";
