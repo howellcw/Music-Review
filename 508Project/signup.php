@@ -6,11 +6,11 @@ include_once 'header.php';
         <div class = main-wrapper>
             <h2>Sign-up</h2>
                 <form class = "signup-form" action="includes/signup-inc.php" method="POST">
-                    <input type="text" name = "name" placeholder="Name*">
-                    <input type="text" name = "age"" placeholder="Age*">
-                    <input type="email" name = "email" placeholder="Email*">
-                    <input type="password" name = "password" placeholder="Password*">
-                    <input type="Gender" name = "gender" placeholder="Gender*">
+                    <input type="text" name = "name" placeholder="Name">
+                    <input type="text" name = "age"" placeholder="Age">
+                    <input type="email" name = "email" placeholder="Email">
+                    <input type="password" name = "password" placeholder="Password">
+                    <input type="Gender" name = "gender" placeholder="Gender">
                     <button type="submit" name = "submit">Sign up</button>
                 </form>
         </div>

@@ -3,7 +3,7 @@ require_once 'connection.php';
 
 $art = $_GET['q'];
 
-$stmt = $conn->query("SELECT s.title, r.rating, r.review_txt, u.name from songs s JOIN reviews r JOIN artists a JOIN users u ON (r.userID = u.userID) WHERE a.name = \"$art\"");
+$stmt = $conn->query("SELECT s.title, r.rating, r.review_txt, u.name from reviews r JOIN songs s ON r.songID = s.songID JOIN artists a JOIN users u ON (r.userID = u.userID) WHERE a.name = \"$art\"");
 while ($row = $stmt->fetch_assoc()) {
     echo "<table style='border: solid 1px black;'>";
     echo "<thead><tr><th>$row[name]</th></tr></thead>";
