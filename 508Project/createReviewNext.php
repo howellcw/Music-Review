@@ -5,7 +5,7 @@ $artReview = $_GET['r'];
 
 $stmt = $conn->query("SELECT al.albumTitle, al.albumID from albums al JOIN artists a ON (al.artistID = a.artistID) WHERE a.name = \"$artReview\"");
 
-echo "Album: <select id = 'albumsSelect'>";
+echo "Album: <select id = 'albumsSelect'  onchange='this.form.submit();'>";
 
 while ($row = $stmt->fetch_assoc()) {
     echo "<option value = $row[albumID]> $row[albumTitle] </option>";
