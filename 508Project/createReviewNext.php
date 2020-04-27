@@ -14,8 +14,8 @@ while ($row = $stmt->fetch_assoc()) {
 $albumSelected = $_GET['albumsSelect'];
 echo "</select>";
 
-$songstmt = $conn->query("SELECT s.title, s.songID from songs s JOIN albums al; ON (s.albumID = al.albumID) WHERE al.albumID = \"$albumSelected\"");
-
+$songstmt = $conn->query("SELECT s.title, s.songID from songs s JOIN albums al; ON (s.albumID = al.albumID) WHERE al.albumID = $albumSelected");
+echo "\"$albumSelected\"";
 echo "Song: <select id = 'songSelected'>";
 
 while ($songrow = $songstmt->fetch_assoc()) {
