@@ -5,10 +5,21 @@ $artReview = $_GET['r'];
 
 $stmt = $conn->query("SELECT al.albumTitle, al.albumID from albums al JOIN artists a ON (al.artistID = a.artistID) WHERE a.name = \"$artReview\"");
 
-echo "<select id = 'albumsSelect'>";
+echo "Album: <select id = 'albumsSelect'>";
 
 while ($row = $stmt->fetch_assoc()) {
-    echo "Album: <option value = $row[albumID]> $row[albumTitle] </option>";
+    echo "<option value = $row[albumID]> $row[albumTitle] </option>";
+}
+
+$albumSelected = $_GET['albumsSelect'];
+echo "</select>";
+
+$stmt = $conn->query("SELECT s.title, s.songID from songs s JOIN albums a; ON (s.albumID = al.albumID) WHERE al.name = \"$albumSelected\"");
+
+echo "Song: <select id = 'albumsSelect'>";
+
+while ($row = $stmt->fetch_assoc()) {
+    echo "<option value = $row[songID]> $row[title] </option>";
 }
 
 echo "</select>";
