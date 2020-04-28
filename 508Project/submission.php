@@ -1,7 +1,13 @@
 <?php 
+
+require_once 'connection.php';
 $selectedSong= $_GET['songSelect'];
-echo "$selectedSong";
+$ratingNum = $_GET['rating'];
+$rvw = $_GET['reviewtext'];
+$uid = $_SESSION['user_id'];
 
 
-
+echo $selectedSong;
+echo $ratingNum;
+echo $rvw;
 ?>
