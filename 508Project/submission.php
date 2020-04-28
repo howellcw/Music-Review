@@ -1,5 +1,5 @@
 <?php 
-$selectedSong= $_GET['songSelect'];
+$selectedSong= $_POST['songSelect'];
 echo "$selectedSong";
 
 
