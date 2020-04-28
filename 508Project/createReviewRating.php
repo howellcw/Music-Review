@@ -1,8 +1,8 @@
 <?php 
 require_once 'connection.php';
 
-$songSelected = $_GET['songSelected'];
-$_POST['songSelected'];
+$songSelected = $_GET['songSelect'];
+$_POST[$songSelected];
 echo "<form action = 'submission.php'>";
 echo "<label for='quantity'>Your rating (between 1 and 10):</label>";
 echo "<input type='number' id='rating' name='rating' min='1' max='10'>";
