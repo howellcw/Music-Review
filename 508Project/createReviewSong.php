@@ -12,7 +12,7 @@ while ($row = $stmt->fetch_assoc()) {
 }
 echo " <input type='submit' value='Submit'/>";
 echo "</select>";
-echo "<label for='quantity'>Your rating (between 1 and 10):</label>";
+echo "<label for='quantity'>Your rating (1 to 10):</label>";
 echo "<input type='number' id='rating' name='rating' min='1' max='10'>";
 echo "<br><br>";
 echo "<textarea name='reviewtext' rows='10' cols='30'>Enter your review here.</textarea>";
