@@ -10,7 +10,6 @@ echo "Song: <select name = 'songSelect'>";
 while ($row = $stmt->fetch_assoc()) {
     echo "<option value = $row[songID]> $row[title] </option>";
 }
-echo " <input type='submit' value='Submit'/>";
 echo "</select>";
 echo "<label for='quantity'>Your rating (1 to 10):</label>";
 echo "<input type='number' id='rating' name='rating' min='1' max='10'>";
