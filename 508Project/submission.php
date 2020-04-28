@@ -1,5 +1,5 @@
 <?php 
-
+session_start();
 require_once 'connection.php';
 $selectedSong= $_GET['songSelect'];
 $ratingNum = $_GET['rating'];
