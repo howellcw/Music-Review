@@ -10,4 +10,5 @@ $uid = $_SESSION['user_id'];
 echo $selectedSong;
 echo $ratingNum;
 echo $rvw;
+echo $uid;
 ?>
