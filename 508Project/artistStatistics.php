@@ -6,7 +6,7 @@ $selArt= $_GET['choose'];
 
 $sql = $conn->query("Select artistID from artists where name = '$selArt'");
 while ($row = $sql->fetch_assoc()) {
-    $selArtID = $row[artistID];
+    $selArtID = $row['artistID'];
 }
 
 echo $selArtID;
