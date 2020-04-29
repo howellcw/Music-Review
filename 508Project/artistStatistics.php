@@ -4,7 +4,7 @@ require_once 'connection.php';
 
 $selArt= $_GET['choose'];
 
-$sql = $conn->query("Select artistID from artists where name = "$selArt";");
+$sql = $conn->query("Select artistID from artists where name = '$selArt'");
 while ($row = $stmt->fetch_assoc()) {
     $selArtID = $row[artistID];
 }
