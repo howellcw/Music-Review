@@ -7,10 +7,12 @@ include_once 'header.php';
             <h2>Sign-up</h2>
                 <form class = "signup-form" action="includes/signup-inc.php" method="POST">
                     <input type="text" name = "name" placeholder="Name">
-                    <input type="text" name = "age"" placeholder="Age">
+                    <input type="number" name = "age"" min = "1" max = "120">
                     <input type="email" name = "email" placeholder="Email">
                     <input type="password" name = "password" placeholder="Password">
-                    <input type="Gender" name = "gender" placeholder="Gender">
+                    <input type="radio" name="gender" value="Male"> Male
+					<input type="radio" name="gender" value="Female"> Female
+					<input type="radio" name="gender" value="Other"> Other
                     <button type="submit" name = "submit">Sign up</button>
                 </form>
         </div>
