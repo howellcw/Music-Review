@@ -4,7 +4,7 @@ require_once 'connection.php';
 $selectedAlbum= $_GET['albumSelect'];
 $stmt = $conn->query("SELECT DISTINCT s.songID, s.title FROM songs s JOIN albums a on s.albumID = $selectedAlbum");
 
-echo "<form method = 'get' action = 'submission.php'>";
+echo "<form method = 'get' action = 'submissionReview.php'>";
 echo "Song: <select name = 'songSelect'>";
 
 while ($row = $stmt->fetch_assoc()) {
