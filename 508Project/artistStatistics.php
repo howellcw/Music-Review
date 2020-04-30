@@ -21,7 +21,7 @@ $avgstmt = $conn->query("SELECT s.title, CAST(AVG(r.rating) AS DECIMAL (2,1)) AS
 echo "Top 10 Rated Songs:\n";
 $count = 1;
 while ($row = $avgstmt->fetch_assoc()) {
-    echo "$count)' ' $selArt: $row[avg_rating]\n";
+    echo "'$count) '$row[title]: $row[avg_rating]\n";
 }
 
 ?>
