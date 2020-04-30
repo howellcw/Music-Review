@@ -16,8 +16,12 @@ while ($row = $stmt->fetch_assoc()) {
     echo "Average Rating for $selArt: $row[averageRating]";
 }
 
+$avgstmt = $conn->query("SELECT s.title, CAST(AVG(r.rating) AS DECIMAL (2,1)) AS avg_rating FROM songs s JOIN reviews r ON (s.songID = r.songID) JOIN artists a WHERE (s.artistID = \"$selArtID\") GROUP BY s.title ORDER BY AVG(r.rating) DESC LIMIT 10");
 
-
-
+echo "Top 10 Rated Songs:\n";
+$count = 1;
+while ($row = $avgstmt->fetch_assoc()) {
+    echo "$count)' ' $selArt: $row[averageRating]\n";
+}
 
 ?>
