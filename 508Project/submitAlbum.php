@@ -5,9 +5,10 @@ require_once 'connection.php';
 $alArt = mysqli_real_escape_string($conn, $_POST['albumArtist']);
 $addAl = mysqli_real_escape_string($conn, $_POST['album']);
 
-$stmt = $conn->query("Select artistID from artists where name = '$alArt'");
+$stmt = "Select artistID from artists where name = '$alArt';";
 mysqli_query($conn, $stmt);
-while ($row = $sql->fetch_assoc()) {
+
+while ($row = $stmt->fetch_assoc()) {
     $selAlArt = $row['artistID'];
 }
 
