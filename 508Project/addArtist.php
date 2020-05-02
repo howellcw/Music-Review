@@ -1,8 +1,8 @@
 <section class="main-container">
 <div class = main-wrapper>
-	<form class = "signup-form" action="submitArtist.php" method="POST">
+	<form class = "add-artist" action="submitArtist.php" method="POST">
 		Artist's Name: <input type="text" name = "artist" placeholder="ArtistName">
-        <button type="submit" name = "submit">Sign up</button>
+        <button type="submit" name = "submit">Add</button>
     </form>
 </div>
 </section>
