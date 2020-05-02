@@ -8,4 +8,4 @@
 <li><a href = "addSong.php">Add a song to an existing album</a></li>
 </ul>
 </body>
-</html>';
+</html>

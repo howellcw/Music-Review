@@ -4,6 +4,16 @@ require_once 'connection.php';
 
 
 $sonAl = mysqli_real_escape_string($conn, $_POST['songAlbum']);
-echo $sonAl;
+$songAdd = mysqli_real_escape_string($conn, $_POST['song']);
+
+$stmt = $conn->query("Select artistID from albums where albumID = '$sonAl'");
+while ($row = $stmt->fetch_assoc()) {
+    $selSonArt = $row['artistID'];
+}
+
+$sql = "INSERT INTO songs (tile, albumID, artistID) VALUES ('$songAdd', '$sonAl','$selSonArt');";
+mysqli_query($conn, $sql);
+
+echo "<a href='index.php'>Successfully added $addAl!</a>";
 
 ?>
