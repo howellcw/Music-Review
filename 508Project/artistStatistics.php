@@ -14,7 +14,7 @@ $stmt = $conn->query("SELECT CAST(AVG(rating) AS DECIMAL (2,1)) AS averageRating
 
 while ($row = $stmt->fetch_assoc()) {
     echo "<table style='border: solid 1px black;'>";
-    echo "<thead><tr><th>Average Rating For $selArt</th></tr></thead>";
+    echo "<thead><tr><th>Average Rating For $selArt:</th></tr></thead>";
     echo "<tbody>";
     echo "<tr><td>$row[averageRating]<tr><td>";
     echo "</tbody>";

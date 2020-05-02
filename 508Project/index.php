@@ -17,6 +17,7 @@ include_once 'header.php';
         <li><a href = "artistReviews.php">See reviews by artist</a></li>
         <li><a href = "artistStatisticsChoose.php">See artists statistics</a></li>
         <li><a href = "createReview.php">Create a review</a></li>
+        <li><a href = "addMenu.php">Add Music</a></li>
         </ul>
         </body>
         </html>';
