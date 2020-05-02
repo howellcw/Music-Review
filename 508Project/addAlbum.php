@@ -10,10 +10,10 @@
  </script>
 </head>
 <body>
- <form action="submitAlbum.php">
+ <form action="submitAlbum.php" method = "POST">
  Artist Name: <input type="text" name="albumArtist" id="search" placeholder="Enter Artist">
  Album Name: <input type="text" name="album" id="search" placeholder="Enter Album">
- <input type="submit" value="Submit"/>
+ <input type="submit" value="Add"/>
  </form> 
 </body>
 </html>
