@@ -11,7 +11,7 @@ while ($row = $stmt->fetch_assoc()) {
     $selSonArt = $row['artistID'];
 }
 
-$sql = "INSERT INTO songs (tile, albumID, artistID) VALUES ('$songAdd', '$sonAl','$selSonArt');";
+$sql = "INSERT INTO songs (title, albumID, artistID) VALUES ('$songAdd', '$sonAl','$selSonArt');";
 mysqli_query($conn, $sql);
 echo $songAdd;
 echo $sonAl;

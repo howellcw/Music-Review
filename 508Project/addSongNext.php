@@ -11,7 +11,7 @@ echo "Album: <select name = 'songAlbum'>";
 while ($row = $stmt->fetch_assoc()) {
     echo "<option value = $row[albumID]> $row[albumTitle] </option>";
 }
-echo"'Song Title: '<input type='text' name='song' placeholder='Enter Song Title'>";
+echo"Song Title: <input type='text' name='song' placeholder='Enter Song Title'>";
 echo " <input type='submit' value='Submit'/>";
 echo "</select>";
 echo "</form>";
