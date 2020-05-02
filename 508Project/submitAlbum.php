@@ -10,7 +10,7 @@ while ($row = $stmt->fetch_assoc()) {
     $selAlArt = $row['artistID'];
 }
 
-echo $selAlArt
+echo $selAlArt;
 
 $sql = "INSERT INTO albums (artistID, albumTitle) VALUES ('$selAlArt', $addAl);";
 mysqli_query($conn, $sql);
