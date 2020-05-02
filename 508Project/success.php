@@ -2,7 +2,7 @@
 include_once "header.php";
 ?>
 
-<a href="index.php">Success!!!</a>
+<a href="index.php">Success!</a>
 
 
 
