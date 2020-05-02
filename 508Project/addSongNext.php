@@ -14,7 +14,7 @@ while ($row = $stmt->fetch_assoc()) {
 echo "</select>";
 echo " Song Title: ";
 echo"<input type='text' name='song' placeholder='Enter Song Title'>";
-echo " <input type='submit' value='Submit'/>";
+echo " <input type='submit' value='Add'/>";
 echo "</form>";
 
 

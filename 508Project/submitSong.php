@@ -13,9 +13,6 @@ while ($row = $stmt->fetch_assoc()) {
 
 $sql = "INSERT INTO songs (title, albumID, artistID) VALUES ('$songAdd', '$sonAl','$selSonArt');";
 mysqli_query($conn, $sql);
-echo $songAdd;
-echo $sonAl;
-echo $selSonArt;
 echo "<a href='index.php'>Successfully added $songAdd!</a>";
 
 ?>
