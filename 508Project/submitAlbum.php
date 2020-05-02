@@ -12,7 +12,7 @@ while ($row = $stmt->fetch_assoc()) {
 
 echo $selAlArt;
 
-$sql = "INSERT INTO albums (artistID, albumTitle) VALUES ('$selAlArt', $addAl);";
+$sql = "INSERT INTO albums (artistID, albumTitle) VALUES ('$selAlArt', '$addAl');";
 mysqli_query($conn, $sql);
 
 echo "<a href='index.php'>Successfully added $addAl!</a>";
