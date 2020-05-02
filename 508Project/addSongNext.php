@@ -1,9 +1,9 @@
 <?php 
 require_once 'connection.php';
 
-$artReview = $_GET['songArtist'];
+$songArt = mysqli_real_escape_string($conn, $_POST['songArtist']);
 
-$stmt = $conn->query("SELECT al.albumTitle, al.albumID from albums al JOIN artists a ON (al.artistID = a.artistID) WHERE a.name = \"$artReview\"");
+$stmt = $conn->query("SELECT al.albumTitle, al.albumID from albums al JOIN artists a ON (al.artistID = a.artistID) WHERE a.name = \"$songArt\"");
 
 echo "<form action = 'submitSong.php'>";
 echo "Album: <select name = 'albumSelect'>";
