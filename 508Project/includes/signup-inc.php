@@ -22,8 +22,7 @@ if(isset($_POST['submit'])){
     } else {
         //Check for valid input characters
         if(empty($name)){
-            echo "$name";
-            //header("Location: ../invalidString.php");
+            echo "Not a valid name.";
             exit();
         } else {
             $sql = "SELECT * FROM users WHERE email = '$email'";
