@@ -1,5 +1,4 @@
 <?php
-        echo ($result);
 include_once "header.php";
 ?>
 
