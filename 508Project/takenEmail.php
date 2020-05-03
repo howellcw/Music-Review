@@ -2,7 +2,7 @@
 include_once "header.php";
 ?>
 
-<a href="update.php">Sorry that email is already associated with an account. Try again??</a>
+<a href="index.php">Sorry that email is already associated with an account. Try again??</a>
 
 
 
